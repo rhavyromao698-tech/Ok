@@ -22,6 +22,14 @@ Para validar os fluxos principais:
 npm test
 ```
 
+## Publicação no Render
+
+O arquivo `render.yaml` permite iniciar uma prévia pelo Blueprint do Render:
+
+`https://render.com/deploy?repo=https://github.com/rhavyromao698-tech/Ok`
+
+Esta configuração usa SQLite no disco temporário do serviço gratuito. Ela é adequada para revisar a interface e os fluxos demonstrativos, mas não deve receber dados reais: reinícios ou novos deploys podem apagar o banco. Para produção, configure uma camada PostgreSQL/Supabase e migre o adaptador de persistência antes de abrir inscrições reais.
+
 ## Contas demonstrativas
 
 As contas abaixo são criadas apenas no banco local e devem ser trocadas antes de qualquer ambiente real:
