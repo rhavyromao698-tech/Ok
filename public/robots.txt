@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /perfil
+Disallow: /atleta
+Disallow: /responsavel
+Disallow: /notificacoes
+Disallow: /favoritos
+Disallow: /comparar
+Sitemap: /sitemap.xml
