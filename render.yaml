@@ -1,0 +1,24 @@
+# Blueprint do Render para uma prévia pública do RDA Sports.
+# O disco gratuito do Render é efêmero; use Supabase/Postgres antes de tratar
+# este serviço como produção com dados reais.
+services:
+  - type: web
+    name: rda-sports
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/config
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22.14.0"
+      - key: SESSION_DAYS
+        value: "7"
+      - key: RDA_DB_PATH
+        value: "./data/rda.sqlite"
+      - key: OPENAI_MODEL
+        value: "gpt-4o-mini"
+      - key: OPENAI_BASE_URL
+        value: "https://api.openai.com/v1/chat/completions"
