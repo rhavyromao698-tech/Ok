@@ -1,0 +1,16 @@
+{
+  "name": "rda-sports-ecossistema",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "RDA Sports + RDA Sports Social — catálogo, comunidade e operação em uma aplicação responsiva.",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs",
+    "test": "node --test --test-reporter=spec",
+    "db:seed": "node src/seed.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
